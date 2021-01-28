@@ -1,6 +1,6 @@
 import { Box, Heading, IconButton, Spacer, Container } from "@chakra-ui/react";
-import { RiMenu4Line, RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
-import Link from "next/link";
+import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
+import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Overlay from "./Overlay";
@@ -31,15 +31,22 @@ const Navbar: React.FC<{}> = () => {
       height={["64px", "64px", "89px", "153px"]}
       display="flex"
       alignItems="center"
-      position="sticky"
+      position="fixed"
       top="0"
       zIndex={2}
     >
       <Container maxWidth="140ch" zIndex={2}>
         <Box display="flex" alignItems="center" width="100%" zIndex={2}>
-          <Heading fontSize={["md", "xl", "2xl", "2xl"]}>
-            Tergel Munkhdelger
-          </Heading>
+          <NextLink href="/" passHref>
+            <Heading
+              fontSize={["md", "xl", "2xl", "2xl"]}
+              as="a"
+              userSelect="none"
+            >
+              Tergel Munkhdelger
+            </Heading>
+          </NextLink>
+
           <Spacer />
           {links.map((link) => (
             <Box
@@ -47,7 +54,7 @@ const Navbar: React.FC<{}> = () => {
               mr={["8px", "25px", "55px", "70px"]}
               display={{ base: "none", md: "block" }}
             >
-              <Link href={link.link} passHref>
+              <NextLink href={link.link} passHref>
                 <IconButton
                   as="a"
                   aria-label={link.label}
@@ -55,7 +62,7 @@ const Navbar: React.FC<{}> = () => {
                   variant="ghost"
                   fontSize={"24px"}
                 />
-              </Link>
+              </NextLink>
             </Box>
           ))}
           <IconButton

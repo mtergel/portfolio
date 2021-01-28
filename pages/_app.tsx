@@ -41,8 +41,6 @@ const theme = extendTheme({
       baseStyle: {},
       variants: {
         more: (props) => ({
-          // bg: "transparent",
-          // border: `8px solid ${props.theme.colors.primary.main}`,
           bg: "#3A4657",
           fontSize: "0.75rem",
           width: "376px",

@@ -1,15 +1,15 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { Container } from "../common";
 
-const Hero: React.FC<{}> = () => {
+const About: React.FC<{}> = () => {
   return (
     <div className="section">
       <Container>
         <Heading as="h1" size="4xl">
-          TERGEL MUNKHDELGER
+          ABOUT
         </Heading>
       </Container>
     </div>
   );
 };
-export default Hero;
+export default About;
