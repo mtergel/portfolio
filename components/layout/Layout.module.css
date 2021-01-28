@@ -1,0 +1,7 @@
+.blackbox {
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  overflow: hidden;
+  background-color: black;
+}
