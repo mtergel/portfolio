@@ -10,10 +10,8 @@ const sentence = {
   },
   visible: {
     opacity: 1,
-
     transition: {
-      delay: 0.8,
-      delayChildren: 0.8,
+      delay: 0.4,
       staggerChildren: 0.08,
     },
   },
@@ -44,7 +42,7 @@ const imagesVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.8,
+      delay: 0.4,
       delayChildren: 0.8,
       staggerChildren: 0.08,
     },
@@ -74,7 +72,7 @@ const linesVariant = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 1.2,
+      delay: 1,
       type: "spring",
       stiffness: 300,
       damping: 30,
@@ -95,7 +93,7 @@ const subTitleVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1.6,
+      delay: 1.4,
       type: "spring",
       stiffness: 300,
       damping: 30,
