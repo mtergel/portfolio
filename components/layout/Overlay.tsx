@@ -88,28 +88,6 @@ const Overlay: React.FC<OverlayProps> = ({ open, onClick }) => {
           </motion.ol>
         )}
       </AnimatePresence>
-
-      {/* <Box
-        position="relative"
-        top="25%"
-        width="100%"
-        textAlign="center"
-        marginTop="30px"
-      >
-        <NextLink href="/" passHref>
-          <Heading>
-            <Link
-              padding="8px"
-              textDecoration="none"
-              fontSize="36px"
-              display="block"
-              transition="0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86)"
-            >
-              About
-            </Link>
-          </Heading>
-        </NextLink>
-      </Box> */}
     </Box>
   );
 };

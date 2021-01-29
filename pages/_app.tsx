@@ -17,10 +17,10 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   colors: {
-    background: "#1C2B35",
+    background: "#1a1a1d",
     primary: {
       alt: "#FFB5B2",
-      main: "#FF9E97",
+      main: "#C3073F",
       light: "#FEDFDD",
     },
     secondary: "#2F4858",

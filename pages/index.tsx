@@ -18,10 +18,13 @@ const Home = () => {
           setActiveStep(destination.index)
         }
         anchors={anchors}
-        render={() => {
+        render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <Hero active={activeStep === 0} />
+              <Hero
+                active={activeStep === 0}
+                moveTo={fullpageApi && fullpageApi.moveTo}
+              />
               <About />
               <Projects />
               <Contact />
