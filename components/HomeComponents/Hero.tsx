@@ -1,8 +1,9 @@
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "../common";
-import MotionBox from "../common/MotionBox";
 import styles from "./Hero.module.css";
+import HeroCard from "./HeroCard";
+import NextLink from "next/link";
 
 const sentence = {
   hidden: {
@@ -18,6 +19,9 @@ const sentence = {
   exit: {
     opacity: 0,
     y: 50,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -32,6 +36,9 @@ const letter = {
   },
   exit: {
     opacity: 0,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -49,17 +56,9 @@ const imagesVariants = {
   },
   exit: {
     opacity: 0,
-  },
-};
-const imageVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -81,6 +80,9 @@ const linesVariant = {
   exit: {
     opacity: 0,
     x: -10,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -109,6 +111,10 @@ const Hero: React.FC<{
   active: boolean;
   moveTo?: (index: number, fallback: number) => void;
 }> = ({ active, moveTo }) => {
+  const handleClickContact = () => {
+    moveTo && moveTo(4, 0);
+  };
+
   return (
     <div className="section">
       <Container>
@@ -120,25 +126,26 @@ const Hero: React.FC<{
               display="flex"
               alignItems="center"
               justifyContent="space-between"
-              flexDir={["column", "column", "column", "column", "row"]}
-              pl={["0", "0", "32px"]}
-              pr={["0", "0", "32px"]}
+              flexDir={["column", "column", "column", "row", "row"]}
+              pl={["0", "24px", "32px"]}
+              pr={["0", "24px", "32px"]}
             >
               <Box
-                display="flex"
+                display={["none", "flex"]}
                 flexDir="column"
                 height="100%"
-                justifyContent="space-between"
+                justifyContent="space-around"
                 maxHeight="358px"
                 alignItems={[
                   "center",
                   "center",
                   "flex-start",
-                  "center",
+                  "flex-start",
                   "flex-start",
                 ]}
                 width={["auto", "auto", "100%", "100%", "auto"]}
                 mr={["0", "0", "0", "64px"]}
+                pb={["0", "0", "0", "32px"]}
               >
                 <motion.div>
                   <Heading as="h1" size="2xl">
@@ -155,7 +162,7 @@ const Hero: React.FC<{
                       ))}
                     </motion.div>
                   </Heading>
-                  <Heading as="h1" size="2xl" mb={[6, 6, 8, 8, 10]}>
+                  <Heading as="h1" size="2xl" mb={2}>
                     <motion.div
                       variants={sentence}
                       initial="hidden"
@@ -211,33 +218,26 @@ const Hero: React.FC<{
                 animate="visible"
                 exit="exit"
               >
-                <motion.img
-                  variants={imageVariants}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  src="/images/aboutcard.svg"
-                  alt="Card with link to about page"
-                  className={styles.card}
-                />
-                <motion.img
-                  variants={imageVariants}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  src="/images/projectcard.svg"
-                  alt="Card with link to about page"
-                  className={styles.card}
-                />
-                <motion.img
-                  variants={imageVariants}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  onClick={() => moveTo && moveTo(4, 0)}
-                  src="/images/contactcard.svg"
-                  alt="Card with link to about page"
-                  className={styles.card}
+                <NextLink href="/about">
+                  <HeroCard
+                    index="CARD1"
+                    svgMask="/images/CARD1_HOVER.svg"
+                    svgUrl="/images/CARD1.svg"
+                  />
+                </NextLink>
+                <NextLink href="/projects">
+                  <HeroCard
+                    index="CARD2"
+                    svgMask="/images/CARD2_HOVER.svg"
+                    svgUrl="/images/CARD2.svg"
+                  />
+                </NextLink>
+
+                <HeroCard
+                  index="CARD3"
+                  svgMask="/images/CARD3_HOVER.svg"
+                  svgUrl="/images/CARD3.svg"
+                  onClick={handleClickContact}
                 />
               </motion.div>
             </Box>

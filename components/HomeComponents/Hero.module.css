@@ -1,8 +1,8 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 100%;
-  column-gap: 27px;
+  width: 100%;
+  min-height: 398px;
   align-items: center;
 }
 
@@ -16,11 +16,18 @@
 }
 
 @media only screen and (max-width: 62em) {
-  .cards {
-    column-gap: 13.5px;
-  }
   .subtitle {
     margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: normal;
+    row-gap: 0;
+    align-items: flex-start;
+    height: 100%;
   }
 }
 

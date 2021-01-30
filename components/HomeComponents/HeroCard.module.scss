@@ -1,0 +1,38 @@
+/* SVGS */
+.styledSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.styledCircle {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.styledImage {
+  transform-origin: 50% 50%;
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  width: auto;
+  height: 100%;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+  transform: translateZ(0);
+}
+
+.card:hover .styledCircle {
+  transform: scale(1);
+}
