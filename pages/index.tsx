@@ -1,4 +1,4 @@
-import { Layout, About, Contact, Hero, Projects, Button } from "../components";
+import { Layout, About, Contact, Hero, Projects } from "../components";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { useState } from "react";
 
