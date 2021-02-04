@@ -6,6 +6,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "../components/layout/Layout.module.css";
+import "../styles/styles.css";
 
 const theme = extendTheme({
   fonts: {

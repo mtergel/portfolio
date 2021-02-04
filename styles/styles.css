@@ -1,0 +1,121 @@
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8 {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.card1 {
+  min-width: 20ch;
+  min-height: 20ch;
+  width: 5vw;
+  height: 5vw;
+  max-width: 60ch;
+  max-height: 60ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/moon.svg);
+}
+
+.card2 {
+  opacity: 0.9;
+  width: 15ch;
+  height: 15ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/cloud.svg);
+  z-index: 2;
+}
+
+.card3 {
+  opacity: 0.9;
+  width: 15ch;
+  height: 15ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/cloud1.svg);
+  z-index: 2;
+}
+
+.card4 {
+  min-width: 40ch;
+  min-height: 40ch;
+  width: 45vw;
+  height: 45vw;
+  max-width: 80ch;
+  max-height: 80ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/star.svg);
+  z-index: 1;
+}
+
+.card5 {
+  opacity: 0.9;
+  width: 15ch;
+  height: 15ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/cloud2.svg);
+  z-index: 2;
+}
+
+.card6 {
+  opacity: 0.9;
+  min-width: 20ch;
+  min-height: 20ch;
+  width: 5vw;
+  height: 5vw;
+  max-width: 60ch;
+  max-height: 60ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/water-waves-left.svg);
+  z-index: 2;
+}
+
+.card7 {
+  opacity: 0.9;
+  min-width: 20ch;
+  min-height: 20ch;
+  width: 5vw;
+  height: 5vw;
+  max-width: 60ch;
+  max-height: 60ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/moonlight.svg);
+  z-index: 2;
+}
+
+.card8 {
+  opacity: 0.9;
+  min-width: 20ch;
+  min-height: 20ch;
+  width: 5vw;
+  height: 5vw;
+  max-width: 60ch;
+  max-height: 60ch;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/moon/water-waves-right.svg);
+  z-index: 2;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
