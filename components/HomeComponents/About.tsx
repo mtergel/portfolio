@@ -1,17 +1,102 @@
-import { Box, Heading } from "@chakra-ui/react";
 import { Container } from "../common";
+import { useSpring, animated } from "react-spring";
+import { Box, Text } from "@chakra-ui/react";
+
+const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
+const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 8 + 120}px,${y / 8 - 120}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 6 - 160}px,${y / 6 + 40}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 6}px,${y / 10 - 80}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 3.5 + 135}px,${y / 6 + 115}px,0)`;
+const trans7 = (x, y) => `translate3d(${x / 12 - 5}px,${y / 10 + 275}px,0)`;
+const trans6 = (x, y) => `translate3d(${x / 10 + 135}px,${y / 10 + 275}px,0)`;
+const trans8 = (x, y) => `translate3d(${x / 10 - 135}px,${y / 10 + 275}px,0)`;
 
 const About: React.FC<{}> = () => {
-  // height={[
-  //   "calc(100% - 64px - 64px)",
-  //   "calc(100% - 64px - 64px)",
-  //   "calc(100% - 89px - 89px)",
-  //   "calc(100% - 153px - 153px)",
-  // ]}
+  const [props, set] = useSpring(() => ({
+    xy: [0, 0],
+    config: { mass: 10, tension: 550, friction: 140 },
+  }));
+
   return (
     <div className="section">
       <Container>
-        <div className="moon">
+        <Box display="flex" height="100%">
+          <Box flex={[2, 2, 1]}>
+            <Box
+              width="100%"
+              height="100%"
+              maxW={600}
+              border="1px solid"
+              zIndex={3}
+              backgroundColor="#1A1A1D"
+              position="relative"
+            >
+              <Box position="absolute">
+                <Text>
+                  My name is Tergel Munkhdelger, and I’m a 23-year-old Front End
+                  Developer based in Mongolia. I like creating simple,
+                  user-friendly websites. Aside from my job, I like learning
+                  about web/mobile designs. In my free time, you can find me
+                  playing my guitar, making instrumentals and petting all the
+                  good dogs. Tergel means the 15th day of the lunar month or
+                  Full moon.
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+          <Box flexGrow={1}>
+            <div
+              className="container"
+              onMouseMove={({ clientX: x, clientY: y }) =>
+                set({ xy: calc(x, y) })
+              }
+            >
+              <animated.div
+                className="card1"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans1) }}
+              />
+              <animated.div
+                className="card2"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans2) }}
+              />
+              <animated.div
+                className="card3"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans3) }}
+              />
+              <animated.div
+                className="card4"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans4) }}
+              />
+              <animated.div
+                className="card5"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans5) }}
+              />
+              <animated.div
+                className="card8"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans6) }}
+              />
+              <animated.div
+                className="card7"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans7) }}
+              />
+              <animated.div
+                className="card6"
+                //@ts-ignore
+                style={{ transform: props.xy.interpolate(trans8) }}
+              />
+            </div>
+          </Box>
+        </Box>
+
+        {/* <div className="moon">
           <div className="moon__img js-parallax-moon">
             <div className="moon__front layer" data-depth="0.8">
               <div className="cloud cloud--front1 js-moon">
@@ -42,7 +127,7 @@ const About: React.FC<{}> = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <Box position="relative" width="100%" height="100%" border="1px solid">
           <Box
             position="absolute"
