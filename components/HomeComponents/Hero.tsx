@@ -162,7 +162,7 @@ const Hero: React.FC<{
                       ))}
                     </motion.div>
                   </Heading>
-                  <Heading as="h1" size="2xl" mb={2}>
+                  <Heading as="h1" size="2xl" mb={6}>
                     <motion.div
                       variants={sentence}
                       initial="hidden"
