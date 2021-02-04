@@ -6,7 +6,7 @@ const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 8 + 120}px,${y / 8 - 120}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 6 - 160}px,${y / 6 + 40}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 6}px,${y / 10 - 80}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 12}px,${y / 10 - 235}px,0)`;
 const trans5 = (x, y) => `translate3d(${x / 3.5 + 135}px,${y / 6 + 115}px,0)`;
 const trans7 = (x, y) => `translate3d(${x / 12 - 5}px,${y / 10 + 275}px,0)`;
 const trans6 = (x, y) => `translate3d(${x / 10 + 135}px,${y / 10 + 275}px,0)`;
@@ -21,7 +21,11 @@ const About: React.FC<{}> = () => {
   return (
     <div className="section">
       <Container>
-        <Box display="flex" height="100%">
+        <Box
+          display="flex"
+          height="100%"
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        >
           <Box flex={[2, 2, 1]}>
             <Box
               width="100%"
@@ -46,12 +50,7 @@ const About: React.FC<{}> = () => {
             </Box>
           </Box>
           <Box flexGrow={1}>
-            <div
-              className="container"
-              onMouseMove={({ clientX: x, clientY: y }) =>
-                set({ xy: calc(x, y) })
-              }
-            >
+            <div className="container">
               <animated.div
                 className="card1"
                 //@ts-ignore
