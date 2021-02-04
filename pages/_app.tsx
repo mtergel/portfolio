@@ -6,7 +6,6 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "../components/layout/Layout.module.css";
-import "../styles/styles.css";
 
 const theme = extendTheme({
   fonts: {
@@ -53,6 +52,18 @@ const theme = extendTheme({
           justifyContent: "space-between",
           borderRadius: "none",
           textTransform: "uppercase",
+        }),
+        square: (props) => ({
+          bg: "transparent",
+          fontWeight: "bold",
+          fontSize: "13px",
+          border: `1px solid #FFFFFF`,
+          lineHeight: 1.25,
+          textTransform: "uppercase",
+          letterSpacing: "2.24px",
+          width: "100%",
+          padding: "12px",
+          borderRadius: 0,
         }),
       },
     },
