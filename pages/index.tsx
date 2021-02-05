@@ -26,7 +26,7 @@ const Home = () => {
                 moveTo={fullpageApi && fullpageApi.moveTo}
               />
               <About active={activeStep === 1} />
-              <Projects />
+              <Projects active={activeStep === 2} />
               <Contact />
             </ReactFullpage.Wrapper>
           );
