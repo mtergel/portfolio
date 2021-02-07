@@ -4,7 +4,6 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import styles from "../../styles/moon.module.css";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Spring } from "react-spring/renderprops";
 
 const textBoxVariants = {
   hidden: {
@@ -15,7 +14,7 @@ const textBoxVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.6,
+      // delay: 0.6,
       type: "spring",
       stiffness: 300,
       damping: 30,
@@ -36,7 +35,8 @@ const textBoxButtons = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1.2,
+      // delay: 1.2,
+      delay: 0.4,
       type: "spring",
       stiffness: 300,
       damping: 30,
@@ -110,12 +110,14 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                       Introduction
                     </Text>
                     <Text fontSize={["14px", "15px", "16px"]}>
-                      My name is Tergel Munkhdelger, and I’m a 23-year-old Front
+                      {`My name is Tergel Munkhdelger, and I’m a ${
+                        new Date().getFullYear() - 1998
+                      }-year-old Front
                       End Developer based in Mongolia. I like creating simple,
                       user-friendly websites. Aside from my job, I like learning
                       about web/mobile designs. In my free time, you can find me
                       playing my guitar, making instrumentals and petting all
-                      the good dogs.
+                      the good dogs.`}
                     </Text>
                     <Text mt={"16px"}>
                       Tergel means the 15th day of the lunar month or Full moon.
@@ -209,7 +211,7 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                     x: 0,
                     opacity: 1,
                     transition: {
-                      delay: 1.2,
+                      delay: 0.4,
                       type: "spring",
                       stiffness: 550,
                       damping: 140,

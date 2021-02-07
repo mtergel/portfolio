@@ -121,7 +121,7 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
               pr={["0", "24px", "32px"]}
             >
               <Box
-                display={["none", "flex"]}
+                display={"flex"}
                 flexDir="column"
                 height="100%"
                 justifyContent="space-around"

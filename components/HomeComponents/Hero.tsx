@@ -12,7 +12,7 @@ const sentence = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.4,
+      // delay: 0.4,
       staggerChildren: 0.08,
     },
   },
@@ -49,7 +49,7 @@ const imagesVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.4,
+      // delay: 0.4,
       delayChildren: 0.8,
       staggerChildren: 0.08,
     },

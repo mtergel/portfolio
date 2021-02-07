@@ -27,7 +27,7 @@ const Home = () => {
               />
               <About active={activeStep === 1} />
               <Projects active={activeStep === 2} />
-              <Contact />
+              <Contact active={activeStep === 3} />
             </ReactFullpage.Wrapper>
           );
         }}
