@@ -109,7 +109,7 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                     >
                       Introduction
                     </Text>
-                    <Text fontSize={["14px", "15px", "16px"]}>
+                    <Text fontSize={["11px", "12px", "16px"]}>
                       {`My name is Tergel Munkhdelger, and I’m a ${
                         new Date().getFullYear() - 1998
                       }-year-old Front
@@ -119,7 +119,7 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                       playing my guitar, making instrumentals and petting all
                       the good dogs.`}
                     </Text>
-                    <Text mt={"16px"}>
+                    <Text pt={"12px"}>
                       Tergel means the 15th day of the lunar month or Full moon.
                     </Text>
                   </Box>

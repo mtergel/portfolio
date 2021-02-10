@@ -6,7 +6,6 @@ const anchors = ["top", "about", "projects", "contact"];
 
 const Home = () => {
   const [activeStep, setActiveStep] = useState<number | null>(null);
-
   return (
     <Layout>
       <ReactFullpage

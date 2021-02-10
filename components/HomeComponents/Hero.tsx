@@ -144,7 +144,7 @@ const Hero: React.FC<{
                   "flex-start",
                 ]}
                 width={["auto", "auto", "100%", "100%", "auto"]}
-                mr={["0", "0", "0", "64px"]}
+                mr={["0", "0", "0", "16px"]}
                 pb={["0", "0", "0", "32px"]}
               >
                 <motion.div>
@@ -176,7 +176,7 @@ const Hero: React.FC<{
                       ))}
                     </motion.div>
                   </Heading>
-                  <Box>
+                  <Box mb={["0", "0", "16px", "0"]}>
                     <motion.div
                       variants={linesVariant}
                       initial="hidden"

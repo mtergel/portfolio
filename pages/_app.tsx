@@ -6,6 +6,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "../components/layout/Layout.module.css";
+import "../styles/fullPage.scss";
 
 const theme = extendTheme({
   fonts: {
@@ -43,7 +44,7 @@ const theme = extendTheme({
         more: (props) => ({
           bg: props.theme.colors.primary.main,
           fontSize: "0.75rem",
-          width: "376px",
+          width: "320px",
           height: "96px",
           padding: "42px 40px 36px",
           fontWeight: "bold",
