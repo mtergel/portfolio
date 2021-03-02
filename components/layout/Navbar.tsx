@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Overlay from "./Overlay";
+import { useRouter } from "next/dist/client/router";
 
 const links = [
   {
@@ -24,6 +25,9 @@ const Navbar: React.FC<{}> = () => {
   const toggleOpen = () => {
     setMenuOpen((prevState) => !prevState);
   };
+  const router = useRouter();
+  console.log(router.pathname);
+
   return (
     <Box
       width="100%"
@@ -32,6 +36,7 @@ const Navbar: React.FC<{}> = () => {
       display="flex"
       alignItems="center"
       position="fixed"
+      backgroundColor={router.pathname === "/" ? "transparent" : "background"}
       top="0"
       zIndex={2}
     >

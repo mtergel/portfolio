@@ -168,34 +168,35 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                           SEE MORE
                         </Button>
                       </Link>
-
-                      <Button
-                        variant="square"
-                        _hover={{
-                          color: "black",
-                          _after: {
-                            height: "100%",
-                          },
-                        }}
-                        _active={{
-                          _after: {
-                            height: "100%",
-                          },
-                        }}
-                        _after={{
-                          content: "''",
-                          position: "absolute",
-                          zIndex: -1,
-                          transition: "height 0.33s",
-                          width: "100%",
-                          height: 0,
-                          top: 0,
-                          left: 0,
-                          backgroundColor: "white",
-                        }}
-                      >
-                        RESUME
-                      </Button>
+                      <Link href="https://www.linkedin.com/in/tergel-munkhdelger-303977174/">
+                        <Button
+                          variant="square"
+                          _hover={{
+                            color: "black",
+                            _after: {
+                              height: "100%",
+                            },
+                          }}
+                          _active={{
+                            _after: {
+                              height: "100%",
+                            },
+                          }}
+                          _after={{
+                            content: "''",
+                            position: "absolute",
+                            zIndex: -1,
+                            transition: "height 0.33s",
+                            width: "100%",
+                            height: 0,
+                            top: 0,
+                            left: 0,
+                            backgroundColor: "white",
+                          }}
+                        >
+                          RESUME
+                        </Button>
+                      </Link>
                     </Box>
                   </motion.div>
                 </Box>

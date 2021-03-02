@@ -44,9 +44,9 @@ const theme = extendTheme({
         more: (props) => ({
           bg: props.theme.colors.primary.main,
           fontSize: "0.75rem",
-          width: "320px",
-          height: "96px",
-          padding: "42px 40px 36px",
+          width: ["256px", "256px", "320px"],
+          height: ["76px", "76px", "96px"],
+          padding: ["18px 20px", "18px 20px", "36px 40px"],
           fontWeight: "bold",
           letterSpacing: "2px",
           lineHeight: "1.125",
@@ -76,6 +76,9 @@ const theme = extendTheme({
         color: props.theme.colors.white,
       },
     }),
+  },
+  shadows: {
+    outline: "0 0 0 3px #C3073F",
   },
 });
 
@@ -111,7 +114,7 @@ export default function MyApp({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Next.js TypeScript</title>
+        <title>Tergel Munkhdelger</title>
       </Head>
       <ChakraProvider resetCSS theme={theme}>
         <Global styles={fonts} />

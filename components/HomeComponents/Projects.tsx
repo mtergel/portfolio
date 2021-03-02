@@ -1,6 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button, Container } from "../common";
+import NextLink from "next/link";
 
 const sentence = {
   hidden: {
@@ -30,26 +31,6 @@ const letter = {
   visible: {
     opacity: 1,
     y: 0,
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.4,
-    },
-  },
-};
-
-const imagesVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.4,
-      delayChildren: 0.8,
-      staggerChildren: 0.08,
-    },
   },
   exit: {
     opacity: 0,
@@ -185,14 +166,16 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
                 >
                   Few projects I've worked on recently.
                 </motion.div>
-                <motion.div
-                  variants={linesVariant}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <Button>View all</Button>
-                </motion.div>
+                <NextLink href="/projects" passHref>
+                  <motion.div
+                    variants={linesVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <Button direction="right">View all</Button>
+                  </motion.div>
+                </NextLink>
               </Box>
             </Box>
           )}

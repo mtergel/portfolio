@@ -1,10 +1,14 @@
 import { Container } from "@chakra-ui/react";
 
-const FPC: React.FC<{}> = ({ children }) => {
+interface FPCProps {
+  paddingTop?: boolean;
+}
+
+const FPC: React.FC<FPCProps> = ({ children, paddingTop }) => {
   return (
     <Container
       maxWidth="140ch"
-      // marginTop={["64px", "64px", "89px", "153px"]}
+      paddingTop={paddingTop && ["64px", "64px", "89px", "153px"]}
       height={[
         "calc(100% - 64px - 64px)",
         "calc(100% - 64px - 64px)",

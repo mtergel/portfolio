@@ -71,7 +71,6 @@ const Overlay: React.FC<OverlayProps> = ({ open, onClick }) => {
         width="100%"
         height={open ? "100%" : "0px"}
         position="fixed"
-        zIndex="1"
         left="0"
         top="0"
         backgroundColor="rgba(0, 0, 0, 0.88)"
