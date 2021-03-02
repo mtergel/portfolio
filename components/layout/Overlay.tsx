@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Box, Heading } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
@@ -49,6 +50,7 @@ const Overlay: React.FC<OverlayProps> = ({ open, onClick }) => {
   if (isMounted) {
     const handleClickHome = () => {
       try {
+        // gets fullpage from window object? how do I add types?
         fullpage_api &&
           fullpage_api.hasOwnProperty("moveTo") &&
           fullpage_api.moveTo(1, 0);
