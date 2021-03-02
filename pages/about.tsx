@@ -22,6 +22,7 @@ import {
   SiRedux,
   SiNextDotJs,
   SiFirebase,
+  SiTypescript,
 } from "react-icons/si";
 import { BsArrowLeftShort } from "react-icons/bs";
 import NextLink from "next/link";
@@ -82,6 +83,10 @@ const About = () => {
                   Redux, Redux-Thunk
                 </ListItem>
                 <ListItem>
+                  <ListIcon as={SiNextDotJs} color="gray.100" fontSize="xl" />
+                  Next.js
+                </ListItem>
+                <ListItem>
                   <ListIcon
                     as={SiApollographql}
                     color="gray.100"
@@ -93,9 +98,10 @@ const About = () => {
                   <ListIcon as={SiGraphql} color="pink.500" fontSize="xl" />
                   GraphQL, TypeGraphQL combined wtih TypeORM
                 </ListItem>
+
                 <ListItem>
-                  <ListIcon as={SiNextDotJs} color="gray.100" fontSize="xl" />
-                  Next.js
+                  <ListIcon as={SiTypescript} color="blue.500" fontSize="xl" />
+                  TypeScript
                 </ListItem>
                 <ListItem>
                   <ListIcon as={SiFirebase} color="yellow.500" fontSize="xl" />
