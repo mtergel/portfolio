@@ -14,7 +14,7 @@ import NextLink from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { getSortedProjectsData } from "../../lib/projects";
 
-const Projects = () => {
+const Projects = ({ allProjectsData }) => {
   return (
     <Layout>
       <Container paddingTop>
@@ -27,6 +27,21 @@ const Projects = () => {
           <Heading flexShrink={0}>Projects</Heading>
           <Divider marginLeft="40px" />
         </Box>
+        <Text>
+          <ul>
+            {allProjectsData.map(({ id, date, title }) => (
+              <NextLink href={`/projects/${id}`}>
+                <li>
+                  {title}
+                  <br />
+                  {id}
+                  <br />
+                  {date}
+                </li>
+              </NextLink>
+            ))}
+          </ul>
+        </Text>
         <Box
           width="100%"
           height="100%"

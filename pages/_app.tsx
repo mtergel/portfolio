@@ -1,7 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { Global } from "@emotion/react";
-import fonts from "../styles/font-face";
-
+import Fonts from "../styles/Fonts";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
@@ -117,7 +115,7 @@ export default function MyApp({
         <title>Tergel Munkhdelger</title>
       </Head>
       <ChakraProvider resetCSS theme={theme}>
-        <Global styles={fonts} />
+        <Fonts />
         <AnimatePresence exitBeforeEnter>
           <motion.div key={router.route}>
             <motion.div

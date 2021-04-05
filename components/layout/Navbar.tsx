@@ -26,7 +26,6 @@ const Navbar: React.FC<{}> = () => {
     setMenuOpen((prevState) => !prevState);
   };
   const router = useRouter();
-  console.log(router.pathname);
 
   return (
     <Box
