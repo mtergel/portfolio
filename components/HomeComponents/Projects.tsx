@@ -1,7 +1,8 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button, Container } from "../common";
 import NextLink from "next/link";
+import styles from "./ImageCover.module.scss";
 
 const sentence = {
   hidden: {
@@ -85,6 +86,72 @@ const subTitleVariant = {
   },
 };
 
+const imageContainerVariant = {
+  hidden: {
+    x: 25,
+    y: 10,
+    scale: 0.8,
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 18,
+      damping: 6,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+const imageVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+const imageOverlay = {
+  hidden: {
+    translateX: "0%",
+    translateZ: "0px",
+  },
+  visible: {
+    translateX: "110%",
+    translateZ: "0px",
+    transition: {
+      duration: 1,
+      ease: [0.54, 0.21, 0.35, 0.85],
+    },
+  },
+};
+
+const infoBoxVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 const Projects: React.FC<{ active: boolean }> = ({ active }) => {
   return (
     <div className="section">
@@ -113,8 +180,6 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
                   "flex-start",
                   "flex-start",
                 ]}
-                width={["auto", "auto", "100%", "100%", "auto"]}
-                mr={["0", "0", "0", "64px"]}
                 pb={["0", "0", "0", "32px"]}
               >
                 <motion.div>
@@ -177,6 +242,43 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
                   </motion.div>
                 </NextLink>
               </Box>
+
+              <motion.div
+                variants={imageContainerVariant}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className={styles.imageContainer}
+              >
+                <NextLink href="/projects" passHref>
+                  <motion.a
+                    variants={imageVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className={styles.imageOver}
+                  >
+                    <motion.div
+                      className={styles.imageCover}
+                      variants={imageOverlay}
+                    />
+                    <motion.div
+                      className={styles.imageCover}
+                      variants={imageOverlay}
+                    />
+                  </motion.a>
+                </NextLink>
+                <motion.div
+                  className={styles.infoBox}
+                  variants={infoBoxVariant}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <Heading size="md">Senritsu</Heading>
+                  <Text>Make your perfect playlist.</Text>
+                </motion.div>
+              </motion.div>
             </Box>
           )}
         </AnimatePresence>
