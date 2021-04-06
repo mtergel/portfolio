@@ -24,9 +24,10 @@ export function getSortedProjectsData() {
       ...matterResult.data,
     };
   });
+  // return allProjectsData.sort((a: any, b: any) => b.order - a.order);
   // Sort posts by date
   return allProjectsData.sort((a: any, b: any) => {
-    if (a.date < b.date) {
+    if (a.order < b.order) {
       return 1;
     } else {
       return -1;

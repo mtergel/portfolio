@@ -23,7 +23,7 @@ const ProjectModal = () => {
       setLoading(true);
       // const data = await getProjectData(id);
       // @ts-ignore
-      const data = await import("../../projects/senritsu.md");
+      const data = await import(`../../projects/${id}.md`);
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(data.default);
 
@@ -62,7 +62,7 @@ const ProjectModal = () => {
       blockScrollOnMount={false}
       motionPreset="slideInBottom"
       preserveScrollBarGap={true}
-      size="lg"
+      size="xl"
     >
       <ModalOverlay />
       <ModalContent>

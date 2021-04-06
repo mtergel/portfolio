@@ -250,7 +250,7 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
                 exit="exit"
                 className={styles.imageContainer}
               >
-                <NextLink href="/projects" passHref>
+                <NextLink href="/projects/senritsu" passHref>
                   <motion.a
                     variants={imageVariant}
                     initial="hidden"
