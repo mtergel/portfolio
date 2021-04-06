@@ -113,9 +113,14 @@ export default function MyApp({
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tergel Munkhdelger</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <ChakraProvider resetCSS theme={theme}>
-        <Fonts />
+        {/* <Fonts /> */}
         <AnimatePresence exitBeforeEnter>
           <motion.div key={router.route}>
             <motion.div
