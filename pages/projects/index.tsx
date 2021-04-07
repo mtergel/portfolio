@@ -28,13 +28,14 @@ const Projects = ({ allProjectsData }) => {
             spacing="30px"
             justify={["center", "center", "center", "flex-start"]}
           >
-            {allProjectsData.map(({ id, subtitle, title, image }) => (
+            {allProjectsData.map(({ id, subtitle, title, image, links }) => (
               <ProjectCard
                 key={id}
                 id={id}
                 subtitle={subtitle}
                 title={title}
                 image={image}
+                links={links}
               />
             ))}
           </Wrap>

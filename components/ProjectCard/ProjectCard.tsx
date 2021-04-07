@@ -1,8 +1,6 @@
 import { Button, IconButton } from "@chakra-ui/button";
 import { Box, Heading, HStack, Text } from "@chakra-ui/layout";
-import { Tooltip } from "@chakra-ui/tooltip";
 import NextLink from "next/link";
-import { HiOutlinePlus } from "react-icons/hi";
 import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
@@ -10,6 +8,7 @@ interface ProjectCardProps {
   title: string;
   subtitle: string;
   image: string;
+  links: any;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,6 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   image,
+  links,
 }) => {
   return (
     <Box
@@ -57,70 +57,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </NextLink>
 
       <Box backgroundColor="gray.800" py={6} px={4} position="relative">
-        <NextLink
-          href={`/projects/?id=${id}`}
-          as={`/projects/${id}`}
-          passHref
-          scroll={false}
-        >
-          <Tooltip label="See more">
-            <IconButton
-              aria-label="See more"
-              isRound
-              icon={<HiOutlinePlus />}
-              position="absolute"
-              top="-20px"
-              variant="solid"
-              right="20px"
-              backgroundColor="#c92052"
-              _active={{
-                backgroundColor: "#c92052",
-              }}
-              _focus={{
-                boxShadow: "0 0 0 3px #FFFFFF",
-                backgroundColor: "#c92052",
-              }}
-              _hover={{
-                backgroundColor: "#c92052",
-              }}
-            />
-          </Tooltip>
-        </NextLink>
+        <iframe
+          src={`https://ghbtns.com/github-btn.html?user=mtergel&repo=${id}&type=star&count=true`}
+          scrolling="0"
+          width="150"
+          height="20"
+          title="GitHub"
+          style={{
+            position: "absolute",
+            top: "-10px",
+            right: "-60px",
+          }}
+        ></iframe>
 
         <HStack>
-          <Button
-            size="sm"
-            variant="solid"
-            background="#c92052"
-            _active={{
-              background: "#c92052",
-            }}
-            _focus={{
-              boxShadow: "0 0 0 3px #FFFFFF",
-              background: "primary.light",
-            }}
-            _hover={{
-              background: "#c92052",
-            }}
-          >
-            Demo
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            _active={{
-              background: "#c92052",
-            }}
-            _focus={{
-              boxShadow: "0 0 0 3px #FFFFFF",
-              background: "primary.light",
-            }}
-            _hover={{
-              background: "#c92052",
-            }}
-          >
-            Code
-          </Button>
+          {links &&
+            Object.entries(links).map(([title, href], index) => (
+              <Button
+                size="sm"
+                variant={index === 0 ? "solid" : "outline"}
+                key={title}
+                as="a"
+                href={href as string}
+                target="_blank"
+                rel="noopener noreferrer"
+                colorScheme={id === "senritsu" ? "pink" : undefined}
+              >
+                {title}
+              </Button>
+            ))}
         </HStack>
       </Box>
     </Box>

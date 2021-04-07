@@ -3,6 +3,11 @@ title: "Gobi"
 subtitle: "E-commerce demo page"
 image: "https://lh3.googleusercontent.com/ba8JdyNGuq3SOBS0RQpbpXFUWnlCwkvM0PN8AbatX_nXMZ7a8_gP6uWGLRn7HHBNc9BFavd1lXnknVLf6HCmvWSmadcfHP1fNbl0TXFaRp3cye2L-WDMp7FgMqRBdhGifIAjS-ztGjbtsSjqVatmaJ-JF8-ulJ3PoKhsiPiaoVzolMIBCdqrXi1yxUM_q5-T7OnhGD8h6PMT88Ivs7idzcjW9SaAN4fT545rCNAndk3EU-iIGdWU-Euo8HOVLRFZzRWH7sCigdrJNDt7bmPzABdsU4DL4GN5WBSLmLnTL-LHBrcZ8HXZOTj9qKCBMltMOdm07REQwiaXz4vSp0xT6RWgYO7Aw7ZRws_QR2ZNS5E1CfXpBNEEv8QSg5C0dEXBGZUls58Gap6gG7rDVPjJWr5Xc2tBkh1XqZksHT1EdV38A10w6w7XJMIkRJwwhVuUY4Pat1I9zCTezjZ2oZFCLnXDpvNJOMDYztYll2gIAo0FeW0R-mCXsDWFUghcNoOyJpo1BYQsCTvGPYqjR63sATBVOZOi86Duqd7_7y-mlkkGHWESD4f0htIP1rg634oP4pOnsUfCKkUQwRy-UaIcvN4v4p1Leg5CzsA-5P4619BOoyGQZdQXoFsn745N8rGjqt6N0Vm3xciyVatT16vdx05a4BPBCr9TRNQxFyRaCdX4dMkY4tapt0J8y7yQo_uj_hqomjKf4bHZK38TDexnNi8d=w680-h863-no?authuser=0"
 order: 10,
+links:
+  {
+    "Demo": "https://6041e083d1a55c8d76c59708--infallible-shaw-2e6c02.netlify.app/",
+    "Code": "https://github.com/mtergel/gobi-demo",
+  }
 ---
 
 # Gobi

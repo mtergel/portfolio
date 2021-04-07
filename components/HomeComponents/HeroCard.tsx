@@ -1,3 +1,4 @@
+import { forwardRef } from "@chakra-ui/system";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import styles from "./HeroCard.module.scss";
@@ -9,12 +10,9 @@ interface HeroCardProps {
   onClick?: () => void;
 }
 
-const HeroCard: React.FC<HeroCardProps> = ({
-  index,
-  svgUrl,
-  svgMask,
-  onClick,
-}) => {
+const HeroCard = forwardRef((props: HeroCardProps, ref) => {
+  const { index, svgUrl, svgMask, onClick } = props;
+
   const [pos, setPos] = useState({
     x: 0,
     y: 0,
@@ -58,6 +56,7 @@ const HeroCard: React.FC<HeroCardProps> = ({
       variants={imageVariants}
       className={styles.card}
       onClick={onClick}
+      ref={ref}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +104,6 @@ const HeroCard: React.FC<HeroCardProps> = ({
       </svg>
     </motion.div>
   );
-};
+});
 
 export default HeroCard;
