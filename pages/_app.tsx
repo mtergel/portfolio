@@ -1,7 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { Global } from "@emotion/react";
-import fonts from "../styles/font-face";
-
+import Fonts from "../styles/Fonts";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
@@ -114,10 +112,17 @@ export default function MyApp({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="My personal portfolio. 🌙"></meta>
+        <meta name="robots" content="index, follow" />
         <title>Tergel Munkhdelger</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <ChakraProvider resetCSS theme={theme}>
-        <Global styles={fonts} />
+        {/* <Fonts /> */}
         <AnimatePresence exitBeforeEnter>
           <motion.div key={router.route}>
             <motion.div

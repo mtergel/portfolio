@@ -1,0 +1,9 @@
+.card {
+  &:hover .bgImage {
+    transform: scale(1.5);
+  }
+}
+
+.bgImage {
+  transition: all 0.3s ease;
+}

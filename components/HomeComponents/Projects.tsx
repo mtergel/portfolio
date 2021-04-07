@@ -88,9 +88,9 @@ const subTitleVariant = {
 
 const imageContainerVariant = {
   hidden: {
-    x: 25,
-    y: 10,
-    scale: 0.8,
+    x: 72,
+    y: -25,
+    scale: 0.4,
   },
   visible: {
     x: 0,
@@ -250,7 +250,7 @@ const Projects: React.FC<{ active: boolean }> = ({ active }) => {
                 exit="exit"
                 className={styles.imageContainer}
               >
-                <NextLink href="/projects" passHref>
+                <NextLink href="/projects/senritsu" passHref>
                   <motion.a
                     variants={imageVariant}
                     initial="hidden"
