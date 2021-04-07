@@ -7,6 +7,7 @@ import {
   ModalBody,
   ModalCloseButton,
   CircularProgress,
+  Center,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -69,7 +70,9 @@ const ProjectModal = () => {
         <ModalCloseButton />
         <ModalBody>
           {loading ? (
-            <CircularProgress isIndeterminate />
+            <Center py={4}>
+              <CircularProgress isIndeterminate />
+            </Center>
           ) : (
             <ReactMarkdown
               renderers={ChakraUIRenderer()}

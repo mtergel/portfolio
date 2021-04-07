@@ -23,6 +23,7 @@ import {
   SiNextDotJs,
   SiFirebase,
   SiTypescript,
+  SiFlutter,
 } from "react-icons/si";
 import { BsArrowLeftShort } from "react-icons/bs";
 import NextLink from "next/link";
@@ -76,7 +77,7 @@ const About = () => {
               <List spacing={3}>
                 <ListItem>
                   <ListIcon as={SiReact} color="blue.500" fontSize="xl" />
-                  React, Functional components, Hooks, React Native
+                  React, Functional components, Hooks
                 </ListItem>
                 <ListItem>
                   <ListIcon as={SiRedux} color="purple.500" fontSize="xl" />
@@ -85,14 +86,6 @@ const About = () => {
                 <ListItem>
                   <ListIcon as={SiNextDotJs} color="gray.100" fontSize="xl" />
                   Next.js
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={SiApollographql}
-                    color="gray.100"
-                    fontSize="xl"
-                  />
-                  Apollo, Apollo-server, Apollo-client
                 </ListItem>
                 <ListItem>
                   <ListIcon as={SiGraphql} color="pink.500" fontSize="xl" />
@@ -106,6 +99,10 @@ const About = () => {
                 <ListItem>
                   <ListIcon as={SiFirebase} color="yellow.500" fontSize="xl" />
                   Firebase and other cloud services
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={SiFlutter} color="blue.500" fontSize="xl" />
+                  Flutter, React Native
                 </ListItem>
               </List>
             </Stack>

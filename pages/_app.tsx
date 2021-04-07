@@ -112,6 +112,8 @@ export default function MyApp({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="My personal portfolio. 🌙"></meta>
+        <meta name="robots" content="index, follow" />
         <title>Tergel Munkhdelger</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
