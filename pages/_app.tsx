@@ -120,6 +120,11 @@ export default function MyApp({
           href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/featured/senritsu.jpg"
+        ></link>
       </Head>
       <ChakraProvider resetCSS theme={theme}>
         {/* <Fonts /> */}

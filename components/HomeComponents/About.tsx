@@ -119,9 +119,6 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                       playing my guitar, making instrumentals and petting all
                       the good dogs.`}
                     </Text>
-                    <Text pt={"12px"}>
-                      Tergel means the 15th day of the lunar month or Full moon.
-                    </Text>
                   </Box>
                   <motion.div
                     variants={textBoxButtons}
@@ -168,7 +165,13 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                           SEE MORE
                         </Button>
                       </Link>
-                      <Link href="https://www.linkedin.com/in/tergel-munkhdelger-303977174/">
+                      <Box
+                        as="a"
+                        target="_blank"
+                        href="https://firebasestorage.googleapis.com/v0/b/portfolio-ab064.appspot.com/o/Tergel's%20Resume.pdf?alt=media&token=be5ab162-5c1b-4fb9-8656-c5906033ded3"
+                        rel="noopener noreferrer"
+                        width="100%"
+                      >
                         <Button
                           variant="square"
                           _hover={{
@@ -196,7 +199,7 @@ const About: React.FC<{ active: boolean }> = ({ active }) => {
                         >
                           RESUME
                         </Button>
-                      </Link>
+                      </Box>
                     </Box>
                   </motion.div>
                 </Box>

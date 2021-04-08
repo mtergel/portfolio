@@ -52,7 +52,7 @@ const About = () => {
               </Text>
               <Text as="p">Fan of Nirvana. 🎸</Text>
               <Text as="p">
-                Intrested in front-end development, and working on enthusiastic
+                Interested in front-end development, and working on enthusiastic
                 projects with positive people
               </Text>
               <Text as="p" color="blue.200">
