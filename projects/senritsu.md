@@ -27,17 +27,13 @@ links:
 
 ### Description
 
-This web app uses Spotify's API to fetch your favourite artists and tracks and generate's recommendation tracks based on few parameters such as danceability. It has an autoplay feature so you can quickly skim through preview tracks and add them your playlist, or you can add whole recommendation as a playlist on spotify. The app has an image gallery fetched from unplash to accompany your listening session and depending on the image the background color will change so you can set it to your desired look. Also it has dark mode so the colors will be dimmed out.
+This web app uses Spotify's API to fetch your favourite artists and tracks and generate's recommendation tracks based on few parameters such as danceability. Or you can search by specific artists/tracks. It has an autoplay feature so you can quickly skim through preview tracks and add them your playlist, or you can add whole recommendation as a playlist on spotify. The app has an image gallery fetched from unplash to accompany your listening session and depending on the image the background color will change so you can set it to your desired look. Also it has dark mode so the colors will be dimmed out.
 
 <br/><br/>
 
-![Senritsu-dark-mode](https://firebasestorage.googleapis.com/v0/b/portfolio-ab064.appspot.com/o/senritsu_flop.png?alt=media&token=94cefef2-c7a7-4ab0-ae0c-01618bf834f1)
+![Senritsu-dark-mode](https://firebasestorage.googleapis.com/v0/b/portfolio-ab064.appspot.com/o/senritsu_2.png?alt=media&token=b672f047-6577-4c1f-9aa5-210146d9e2fa)
 
 <br/><br/>
-
-### Things to improve
-
-So far it only uses user's long time favourite artists, tracks so result may become stale. In order to fix issue we need to add some extra features. These are setting the user's time range when fetching their top artists and tracks and adding the option to get recommendations based on a specific artist, track. These will be included in the next release.
 
 <br/><br/>
 
