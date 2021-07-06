@@ -2,7 +2,7 @@
 title: "Fuyu"
 subtitle: "Web based kanban board"
 image: "https://firebasestorage.googleapis.com/v0/b/portfolio-ab064.appspot.com/o/fuyu.PNG?alt=media&token=56e4b63b-a8c4-4fbe-a964-d02181453130"
-order: 15,
+order: 30
 links:
   {
     "Demo": "http://fuyu-trello-clone-git-main.mtergel.vercel.app/",

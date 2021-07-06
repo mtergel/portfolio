@@ -2,7 +2,7 @@
 title: "Kosame"
 subtitle: "Weather forecast (Google Extension)"
 image: "https://firebasestorage.googleapis.com/v0/b/portfolio-ab064.appspot.com/o/kosame.png?alt=media&token=0b90b67a-38f2-40d3-a034-837c9ae80262"
-order: 20,
+order: 20
 links: { "Code": "https://github.com/mtergel/kosame-weather-app" }
 ---
 

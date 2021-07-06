@@ -27,11 +27,7 @@ export function getSortedProjectsData() {
   // return allProjectsData.sort((a: any, b: any) => b.order - a.order);
   // Sort posts by date
   return allProjectsData.sort((a: any, b: any) => {
-    if (a.order < b.order) {
-      return 1;
-    } else {
-      return -1;
-    }
+    return a.order - b.order;
   });
 }
 
